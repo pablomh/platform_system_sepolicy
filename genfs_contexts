@@ -36,6 +36,7 @@ genfscon vfat / u:object_r:vfat:s0
 genfscon debugfs / u:object_r:debugfs:s0
 genfscon tracefs / u:object_r:debugfs_tracing:s0
 genfscon fuse / u:object_r:fuse:s0
+genfscon fuseblk / u:object_r:sdcard_external:s0
 genfscon configfs / u:object_r:configfs:s0
 genfscon sdcardfs / u:object_r:sdcardfs:s0
 genfscon pstore / u:object_r:pstorefs:s0
