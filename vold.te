@@ -202,3 +202,9 @@ neverallow { domain -vold -init } vold_data_file:notdevfile_class_set *;
 neverallow { domain -vold -init } restorecon_prop:property_service set;
 
 neverallow vold fsck_exec:file execute_no_trans;
+
+# Allow vold to access fuse for fuse-based fs
+allow vold fuse_device:chr_file rw_file_perms;
+
+# NTFS-3g wants to drop permission
+allow vold self:capability { setgid setuid };
