@@ -178,6 +178,7 @@ allow vold storage_file:dir mounton;
 # For AppFuse.
 allow vold fuse_device:chr_file rw_file_perms;
 allow vold fuse:filesystem { relabelfrom };
+allow vold fuseblk:filesystem { relabelfrom };
 allow vold app_fusefs:filesystem { relabelfrom relabelto };
 allow vold app_fusefs:filesystem { mount unmount };
 
